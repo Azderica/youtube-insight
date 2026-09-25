@@ -5,7 +5,7 @@
 - **Discord 스레드**: https://discord.com/channels/1488217973893365902/1541026328646647899
 - **스레드 ID**: 1541026328646647899
 - **생성일**: 2026-08-23
-- **작업 디렉토리**: /Users/mh97888/business/projects/project-youtube-insight
+- **작업 디렉토리**: /Users/mh97888/business/projects/youtube-insight
 - **Notion 레지스트리 행**: 
 
 ## 한 줄 목적
@@ -146,7 +146,7 @@ gcalcli --nocache add \
 
 ## 작업 공간 규약 — 워크트리를 만들지 않는다
 
-**이 프로젝트에서는 git 워크트리를 만들지 않는다.** `/Users/mh97888/business/projects/project-youtube-insight` 에서 직접 작업한다.
+**이 프로젝트에서는 git 워크트리를 만들지 않는다.** `/Users/mh97888/business/projects/youtube-insight` 에서 직접 작업한다.
 격리가 필요하다고 판단되더라도 만들지 않는다. 이 규약이 워크트리 관련 스킬·기본 동작보다 우선한다.
 
 이유:

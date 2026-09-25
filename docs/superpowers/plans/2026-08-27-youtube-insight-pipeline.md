@@ -1189,7 +1189,7 @@ Expected: `처리된 신규 영상: 0건` (등록된 채널이 없으므로) 또
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/mh97888/business/projects/project-youtube-insight/scripts/watch.sh</string>
+        <string>/Users/mh97888/business/projects/youtube-insight/scripts/watch.sh</string>
     </array>
 
     <key>EnvironmentVariables</key>
