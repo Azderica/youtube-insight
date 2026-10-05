@@ -6,6 +6,8 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>유튜브 인사이트</title>
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css">
 {preload}<style>
   :root {{
     --bg: #f7f7f8;
@@ -33,8 +35,8 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     padding: 2.5rem 1.25rem 4rem;
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo",
-      "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
     line-height: 1.6;
   }}
   .wrap {{ max-width: 680px; margin: 0 auto; }}
