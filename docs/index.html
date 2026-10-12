@@ -6,7 +6,7 @@
 <title>유튜브 인사이트</title>
 <link rel="stylesheet" as="style" crossorigin
   href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css">
-<link rel="preload" as="image" fetchpriority="high" href="https://i.ytimg.com/vi/c7IM7r3ZPLI/hqdefault.jpg">
+<link rel="preload" as="image" fetchpriority="high" href="https://i.ytimg.com/vi/prAJhW3JjIk/hqdefault.jpg">
 <style>
   :root {
     --bg: #f7f7f8;
@@ -110,7 +110,15 @@
 <h1>유튜브 인사이트</h1>
 <p class="subtitle">보지 않고도 먼저 아는 요약 저장소</p>
 <article>
-<img class="thumb" src="https://i.ytimg.com/vi/c7IM7r3ZPLI/hqdefault.jpg" alt="" loading="eager" fetchpriority="high">
+<img class="thumb" src="https://i.ytimg.com/vi/prAJhW3JjIk/hqdefault.jpg" alt="" loading="eager" fetchpriority="high">
+<h2><a href="https://www.youtube.com/shorts/prAJhW3JjIk">EP 3. 유니티, 언리얼 대신 왜 하필 고도??</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-12T00:00:00+00:00</p>
+<p class="summary">2인 퇴근 후 2D 게임팀이 유니티/언리얼 대신 고도(Godot)를 고른 이유. 핵심은 AI와 함께 작업하는 방식에 맞아서 — 고도의 씬(.tscn)과 설정이 사람이 읽을 수 있는 텍스트 파일로 저장돼 노드 위치·연결된 스크립트·설정값이 코드처럼 줄 단위로 보인다. 그래서 AI가 에디터 버튼을 일일이 누르는 대신 파일을 직접 읽고/노드 추가하고/값을 바꾸고/실행해서 깨졌는지 바로 검증하는 루프가 가능. 2D 전용 렌더러·물리 내장, MIT 오픈소스라 로열티·시트비용 없음. 다만 3D 대작이나 콘솔 우선이면 다른 엔진이 맞을 수 있다고 단서를 둠.</p>
+<p class="insight"><strong>인사이트</strong> 엔진 선택 기준이 &#x27;성능/생태계&#x27;가 아니라 &#x27;AI 에이전트가 안전하게 읽고 고칠 수 있는 파일 포맷인가&#x27;로 바뀜 — Godot의 텍스트 기반 씬 파일은 Unity의 바이너리/복잡한 YAML(.unity, .prefab)보다 AI가 직접 편집·검증하기 훨씬 안전하다. AI 보조 개발 워크플로를 쓰는 신규 2D 프로젝트라면 엔진 선택 시 이 기준을 같이 고려할 가치가 있음.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/c7IM7r3ZPLI/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
 <h2><a href="https://youtu.be/c7IM7r3ZPLI">왜 다들 클라우드플레어로 갈까 — 압축·폰트·CLI·CDN까지 실전 팁 7가지</a></h2>
 <p class="meta">메이커 에반 | Maker Evan · 2026-10-05T00:00:00+00:00</p>
 <p class="summary">바이브코더용 실전 배포 팁 7가지. 1)코드는 Cloudflare Workers, 파일은 R2, DB는 Neon Postgres+Hyperdrive (D1은 10GB 상한·단일쓰기큐·벡터검색 확장 열위라 비권장). 2)업로드 이미지는 화면 크기 기준으로 WebP 압축(가로1600/화질75, 10MB→127KB), 영상은 720p 재인코딩. 3)한글 폰트는 Pretendard+다이나믹 서브셋(영한 통일, 9단계 굵기, 7MB→조각당 20KB대). 4)AWS는 바이브코더에 위험 — 키 유출시 상한없는 과금폭탄(실제사례 5분만에 탈취·$2375 청구), Cloudflare/Neon 무료플랜은 초과시 요금 대신 &#x27;멈춤&#x27;. 5)목록용 썸네일은 화질·크기 크게 낮춰도 됨(가로400/화질60, 5KB). 6)Wrangler 등 CLI 필수설치 — AI가 대시보드 복붙 없이 배포·로그·DB 직접 처리. 7)CDN 붙이면 DB엔 파일명만 저장+CDN prefix는 환경변수+파일명에 해시로 캐시 무효화까지 같이 바꿔야 함.</p>
