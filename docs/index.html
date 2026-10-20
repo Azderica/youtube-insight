@@ -118,6 +118,86 @@
 </article>
 
 <article>
+<img class="thumb" src="https://i.ytimg.com/vi/TyGK9aV9NPY/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/TyGK9aV9NPY">EP 22. 스팀 넥스트 페스트, 다음 대박날 인디게임은?</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">스팀 넥스트 페스트(1년 3회 데모 행사) 진행 중, 출품작이 약 7천여 개로 전회보다 크게 늘었고 절반은 올해 출시 예정. 유명작(아키에이지, 크로니클, 스트롱홀드4)도 있지만 18% 이상이 퍼블리셔 없는 직접 출품, 로그라이크가 1/4. 과거 사례: &#x27;데스크톱 디펜더&#x27;는 팔로워 200명으로 들어가 위시리스트 2만 개 모음, &#x27;양냥우체국&#x27;은 행사 직전 스팀페이지 열어 5천→5만 개로 성장. 첫 48시간은 무작위 노출(작은 게임도 첫화면 노출 기회), 이후엔 플레이기록 기반 개인화 추천, 광고비로 노출 순서 구매 불가.</p>
+<p class="insight"><strong>인사이트</strong> 스팀 넥스트 페스트는 팔로워 수와 무관하게 첫 48시간 무작위 노출 구조라 소규모 인디에게도 실질적인 마케팅 기회다 — 데모가 준비된 상태로 행사 시작 전에 스팀 페이지만 열어둬도 노출을 받을 수 있다는 것이 실제 성공 사례로 확인됨.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/WxPa7lminWE/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/WxPa7lminWE">Dev Log 4. 한 발 맞히면 줄줄이 기절</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">적에게 체력 대신 기절 상태만 있고, 기절한 적을 슬라임이 먹는 메커닉에서 &#x27;연쇄 기절&#x27;이 빠르게 지나가도 체감되도록 다듬은 과정. 색 플래시(피격 순간 흰색 번쩍), 기절한 적 주변 작은 별+충돌지점 큰 별(누가 누굴 쳤는지 시각화), 숫자 표시는 기각, 밀림 모션(일정속도 대신 확 밀렸다 점점 느려지는 커브), 연쇄가 길어질수록 음높이 상승 — 이 조합으로 완성. 디렉팅 방식은 문제를 AI에게 설명하고 이펙트 후보를 AI가 조사해오게 한 뒤 직접 테스트하며 조절.</p>
+<p class="insight"><strong>인사이트</strong> 타격감(juice) 설계를 AI와 협업할 때는 &#x27;문제를 설명하고 AI가 후보 이펙트를 조사해오게 한 뒤, 개발자가 직접 플레이하며 파라미터를 조정&#x27;하는 역할 분담이 유효하다 — 색/파티클/모션커브/피치 상승 네 가지를 조합해야 빠른 연쇄 액션도 시각·청각적으로 체감된다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/kB6lvOFbK50/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/kB6lvOFbK50">Dev Log 3. AI로 고도 약점 극복하기</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">Godot(GDScript)가 적 300마리 이상에서 느려지는 문제를 해결한 과정. 프로파일링해보니 실제로 가장 무거운 건 적 렌더링이었고(예상과 달랐음), 같은 목적지로 가는 적들의 길찾기 결과를 공유해 길찾기 호출을 3400회→640회로 줄였으며, 그래도 남은 가장 무거운 벽 충돌검사 연산만 선택적으로 C#(GDExtension)으로 재작성해 44% 추가 감소. 결과: 400마리에서 75fps 달성(기존엔 300마리에서 버벅임), 실제 게임에는 240마리까지만 등장해 충분.</p>
+<p class="insight"><strong>인사이트</strong> 엔진 성능 한계를 AI로 극복할 때는 (1) 프로파일링으로 실제 병목을 먼저 확인하고(가정이 틀릴 수 있음), (2) 중복 연산 제거를 먼저 시도한 뒤, (3) 가장 무거운 핫패스만 선택적으로 더 빠른 언어로 재작성하는 순서가 효율적이다 — 전체를 바꾸는 대신 꼭 필요한 부분만 바꿔야 빌드·검증 부담을 최소화할 수 있다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/DbwKveMZvgI/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/DbwKveMZvgI">Dev Log 2. 슬링 팔 모션 만들기</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">슬라임의 8방향 슬링 공격 애니메이션(방향별 12장)을 AI로 제작한 과정. 텍스트 프롬프트와 기존 AI 도구(픽셀랩, 에이스프라이트+AI)로는 방향마다 캐릭터가 달라지거나 팔이 매끈한 공처럼 나와 실패했지만, 팀원이 직접 그린 러프 스케치 2장(측면에서 몸은 뒤로, 팔 두 개가 앞으로 뻗은 그림)을 참고 이미지로 주자 AI가 처음으로 일관된 8방향 참조 시트를 만들어냄. 이후 팔 길이만 보간해 12장의 프레임을 생성했지만, 캐릭터 얼굴 등 세부는 수작업으로 고쳐야 했음.</p>
+<p class="insight"><strong>인사이트</strong> AI 캐릭터 애니메이션 작업에서, 텍스트 프롬프트만으로는 방향별 일관성을 얻기 어렵지만 개발자 본인이 그린 거친 러프 스케치를 레퍼런스로 주면 AI가 훨씬 일관된 결과를 낸다. 또한 AI는 &#x27;새로 생성&#x27;에는 강하지만 &#x27;기존 그림을 원하는 방향으로 수정&#x27;하는 데는 약해 수작업 보정 시간을 항상 감안해야 한다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/VXxjSCDvo0g/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/VXxjSCDvo0g">EP 19. 고도 선택 전 알아둘 단점 5가지</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">1~2인 팀 기준 Godot의 5가지 약점: (1) 생태계가 작음(Unity/Unreal 각 12만+ 에셋 vs Godot 공식 에셋스토어는 올해 6월 개설), (2) 적이 많아지면 GDScript가 C#보다 느려 무거워짐, (3) 3D가 약함(나나이트/루멘 없음, 큰 맵은 엔진 직접 빌드 필요), (4) GDScript라는 새 언어를 배워야 하고 경험자가 적음, (5) 콘솔 공식 지원 없어 포팅업체 필요. 저자 팀은 AI 에이전트가 코딩을 대신하고, 복잡한 3D나 콘솔 계획이 없어 대부분 문제없다고 판단하지만 성능 문제(300마리에서 렉)는 당시 미해결 과제로 남겨둠(후속 Dev Log 3에서 해결).</p>
+<p class="insight"><strong>인사이트</strong> 엔진의 알려진 단점은 팀 상황에 따라 체감 정도가 다르다 — AI 에이전트 기반 소규모 2D 팀은 &#x27;새 언어 학습&#x27;, &#x27;생태계 크기&#x27;, &#x27;콘솔 지원&#x27;은 할인해서 볼 수 있지만, GDScript의 실제 성능 한계(다수 엔티티 처리)는 가정이 아니라 조기에 실측해봐야 할 진짜 제약이다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/7BsE2JWxUpE/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/7BsE2JWxUpE">EP 17. AI 아트 명암 맞추는 법</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">도트 그림은 조명이 그림 안에 고정되어 &#x27;그림마다 해가 하나씩 들어있는&#x27; 구조다. AI에게 해의 위치를 명시하지 않으면 그림마다 다르게 그려지고, 좌우 반전 시 조명 방향도 같이 뒤집혀버린다. 그래서 슬라임은 몸을 반전시키지 않고 방향별로 얼굴을 따로 그렸고, 회전하는 보스는 몸은 돌리되 매 프레임 명암을 다시 칠해 조명 방향(왼쪽 위)을 고정시켰다. 그림자는 항상 해의 반대편, 색은 고정 한 가지로 정하고, 매 결과물마다 숫자로 밝은 가장자리를 검사+눈으로 전체가 하나의 광원처럼 보이는지 확인하는 규칙을 에이전트 규칙 파일에 등록.</p>
+<p class="insight"><strong>인사이트</strong> AI 생성 2D 도트 아트는 &#x27;조명 방향 계약&#x27;을 명시적인 규칙 파일로 만들어 모든 생성물에 강제해야 한다 — 특히 스프라이트 반전·회전은 그림에 고정된 조명을 깨뜨리므로, 반전 대신 방향별 별도 그리기, 회전 대신 매 프레임 재도색 같은 보정이 필요하고, 숫자 검증(가장자리 밝기)으로 일관성을 수십 장 단위에서도 보장할 수 있다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/fhcFrswuG58/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/fhcFrswuG58">EP 16. AI 아트 외곽선 맞추는 법</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">외곽선의 굵기/진하기는 시각적 위계(눈이 먼저 가는 순서)를 결정하는데, AI는 배경 풀 같은 소품에도 주인공처럼 두꺼운 외곽선을 그려 위계를 무너뜨린다. 해결: 주인공/적은 거의 검은 진한 선, 자연 소품은 자기 재질의 가장 어두운 색으로 얇은 선, 바닥은 선 없음으로 역할별 규칙을 정함. 두께는 소품 1도트(바닥 접지면만 2도트로 무게감), 안쪽선은 바깥선보다 가볍게(색칠공부처럼 보이는 것 방지). 프롬프트만으로는 지켜지지 않아 에이전트 후처리 규칙+숫자 검증(반투명 경계 없음, 역할별 지정색만 사용)+실제 화면 크기에서 주인공이 먼저 보이는지 육안 확인으로 강제.</p>
+<p class="insight"><strong>인사이트</strong> AI 생성 아트의 시각적 위계(무엇이 먼저 보이는가)는 외곽선 굵기·색을 역할별로 차등 지정해야 만들어진다 — AI는 기본적으로 모든 대상을 똑같이 중요하게 그리므로, 명암 일관성과 마찬가지로 명시적 후처리 규칙 + 숫자/육안 검증 조합으로 강제해야 한다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/m3d_QXPKM4A/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/m3d_QXPKM4A">EP 14. AI 아트 색 맞추는 법</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">같은 그림도 팔레트만 바꾸면 가을 느낌, 게임보이(2색) 느낌으로 완전히 달라짐 — 게임의 색 정체성은 팔레트가 결정한다. AI는 고정된 팔레트를 모르고 매번 비슷하지만 다른 색을 생성하므로, 개발자가 직접 화면 하나를 먼저 완성해 팔레트를 뽑거나(셀레스트 아트디렉터 사례) Lospec 같은 사이트의 기성 팔레트를 입혀보고 골라야 한다. 16~32색으로 시작해 재질별 밝기 램프로 정리. AI는 지정된 헥스코드를 10% 미만 정확도로만 맞춘다는 연구를 인용하며, 색 이름+승인된 참고 이미지를 주고 후처리로 팔레트 밖 색을 보정하되 &#x27;같은 재질 램프 내 밝기 순서로&#x27; 보정해야 한다(전체에서 가장 가까운 색으로 보정하면 화분 갈색이 나뭇잎 초록으로 바뀌는 사고 발생). 보정 후 숫자로 팔레트 준수·색상 개수 검사.</p>
+<p class="insight"><strong>인사이트</strong> AI는 정확한 목표 팔레트(헥스코드)를 안정적으로 지키지 못한다(인용 연구상 10% 미만 일치) — 팔레트는 외부에서 고정(직접 그리거나 기성 팔레트 차용)하고, 생성 후 보정은 &#x27;전역 최근접색&#x27;이 아니라 &#x27;같은 재질의 밝기 램프 내에서&#x27; 교정해야 재질 간 색 오염을 막을 수 있다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/KcntZJ8HmEo/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/KcntZJ8HmEo">EP 12. AI로 게임 만들어도 어려운 세 가지</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">AI 사용 여부와 무관하게 모든 게임개발자가 풀어야 하는 세 문제: (1) 아트 일관성 — 개별 캐릭터는 멋지지만 한 화면에 모으면 색감·비율·디테일이 제각각이라 공통 기준으로 고치는 과정이 필요. (2) 손맛(타격감) — 이동·공격이 기능상 작동해도 밋밋하며, 이펙트를 늘리는 게 아니라 원하는 반응을 정하고 직접 플레이하며 타이밍·강도를 조정해야 함. (3) 차별성 — 비슷한 게임을 빠르게 찍어내는 것만으로는 플레이할 이유가 안 생기고, 양산형 게임에 대한 불신에 AI 반감까지 겹치면 더 어려워짐. 반례로 AI 활용을 공개한 오토배틀러 &#x27;슬롯바운드&#x27;는 위시리스트 10만을 넘김 — 핵심은 &#x27;내 게임만의 재미가 무엇인가&#x27;.</p>
+<p class="insight"><strong>인사이트</strong> 이 영상은 이후(EP21) 스팀 리뷰 데이터로 실증된 &#x27;AI 반감의 실체는 퀄리티 문제&#x27;라는 결론을 개발자가 먼저 직관적으로 포착한 버전이다. 추가로 &#x27;아트 일관성&#x27;과 &#x27;손맛&#x27;은 AI가 자동으로 해결해주지 않는, 반드시 사람이 직접 보정해야 하는 영역으로 명확히 짚었다.</p>
+</article>
+
+<article>
+<img class="thumb" src="https://i.ytimg.com/vi/HqNicJhUGeA/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
+<h2><a href="https://www.youtube.com/shorts/HqNicJhUGeA">EP 10. AI로 게임 복제 협박, 자작극 의혹?</a></h2>
+<p class="meta">MGD - Midnight Game Devs · 2026-10-20T00:00:00+00:00</p>
+<p class="summary">한 개발자가 &#x27;AI로 게임을 복제했으니 200달러를 안 보내면 먼저 출시하겠다&#x27;는 협박 메일(복제 영상 첨부)을 공개해 조회수 55만을 기록했으나, 협박범이 비공개 이메일 주소를 어떻게 알았는지 불분명하고 해당 개발자가 과거 타인의 게임을 복제해 무료 배포하겠다고 댓글 단 기록이 발견되며 자작극 의혹이 제기됨. 진위와 무관하게, 영상/트레일러만 공개된 미출시 게임은 복제하기도 쉽고 복제 협박의 신빙성도 높아지므로, 최소 플레이 가능한 데모 수준까지 만들어둔 뒤 공개하는 것이 안전하다는 결론.</p>
+<p class="insight"><strong>인사이트</strong> 미출시 게임을 영상으로만 공개하는 것은 실제 복제 위험과 &#x27;복제당했다&#x27;는 주장의 신빙성을 둘 다 높인다 — 공개 시점에 최소한 플레이 가능한 데모를 함께 준비하는 것이 진위 논란과 무관하게 유효한 리스크 관리 방법이다.</p>
+</article>
+
+<article>
 <img class="thumb" src="https://i.ytimg.com/vi/rswr2E1PaI4/hqdefault.jpg" alt="" loading="lazy" fetchpriority="auto">
 <h2><a href="https://www.youtube.com/shorts/rswr2E1PaI4">EP 21. AI 게임 반감 실제로 얼마나 클까</a></h2>
 <p class="meta">MGD - Midnight Game Devs · 2026-10-19T00:00:00+00:00</p>
