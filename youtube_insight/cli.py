@@ -8,6 +8,7 @@ from youtube_insight.notify import send_notification
 from youtube_insight.feed import fetch_feed_entries, find_new_entries
 from youtube_insight.notion_sync import sync_video_to_notion
 from youtube_insight.publish import render_index
+from youtube_insight.subscriptions import get_credentials, sync_subscriptions
 
 
 def cmd_channels_add(conn: sqlite3.Connection, channel_id: str, channel_name: str) -> None:
@@ -119,6 +120,11 @@ def cmd_search(conn: sqlite3.Connection, query: str) -> list[dict]:
     return [dict(row) for row in rows]
 
 
+def cmd_subscriptions_sync(conn: sqlite3.Connection) -> int:
+    credentials = get_credentials(config.google_client_secret_path(), config.google_token_path())
+    return sync_subscriptions(conn, credentials)
+
+
 def _get_connection() -> sqlite3.Connection:
     path = config.db_path()
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -154,6 +160,8 @@ def build_parser() -> argparse.ArgumentParser:
     p_search = sub.add_parser("search")
     p_search.add_argument("query")
 
+    sub.add_parser("subscriptions-sync")
+
     return parser
 
 
@@ -186,6 +194,9 @@ def main() -> None:
             print("검색 결과 없음")
         for r in results:
             print(f"[{r['channel_name']}] {r['title']}\n  {r['insight']}\n  {r['url']}\n")
+    elif args.command == "subscriptions-sync":
+        count = cmd_subscriptions_sync(conn)
+        print(f"구독 채널 동기화됨: {count}건")
 
 
 if __name__ == "__main__":

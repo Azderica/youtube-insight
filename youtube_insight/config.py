@@ -25,3 +25,17 @@ def notion_token() -> str:
 
 def notion_database_id() -> str:
     return os.environ.get("NOTION_DATABASE_ID", "")
+
+
+def google_client_secret_path() -> Path:
+    override = os.environ.get("GOOGLE_CLIENT_SECRET_PATH")
+    if override:
+        return Path(override)
+    return PROJECT_ROOT / "data" / "client_secret.json"
+
+
+def google_token_path() -> Path:
+    override = os.environ.get("GOOGLE_TOKEN_PATH")
+    if override:
+        return Path(override)
+    return PROJECT_ROOT / "data" / "google_token.json"
