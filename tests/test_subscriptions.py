@@ -44,6 +44,17 @@ def test_get_credentials_토큰없으면_oauth플로우_실행후_저장(tmp_pat
     assert token_path.read_text(encoding="utf-8") == '{"token": "new"}'
 
 
+def test_get_credentials_토큰저장시_소유자만_읽기쓰기_권한(tmp_path):
+    token_path = tmp_path / "token.json"
+    mock_credentials = MagicMock()
+    mock_credentials.to_json.return_value = '{"token": "new"}'
+    mock_flow = MagicMock()
+    mock_flow.run_local_server.return_value = mock_credentials
+    with patch("youtube_insight.subscriptions.InstalledAppFlow.from_client_secrets_file", return_value=mock_flow):
+        subscriptions.get_credentials(tmp_path / "client_secret.json", token_path)
+    assert token_path.stat().st_mode & 0o777 == 0o600
+
+
 def test_fetch_subscriptions_페이지네이션_모두_수집():
     mock_youtube = MagicMock()
     mock_youtube.subscriptions.return_value.list.return_value.execute.side_effect = [

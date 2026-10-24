@@ -8,6 +8,7 @@ from googleapiclient.discovery import build
 from youtube_insight import db
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.readonly"]
+TOKEN_FILE_MODE = 0o600
 
 
 def get_credentials(client_secret_path: Path, token_path: Path) -> Credentials:
@@ -22,6 +23,8 @@ def get_credentials(client_secret_path: Path, token_path: Path) -> Credentials:
         flow = InstalledAppFlow.from_client_secrets_file(str(client_secret_path), SCOPES)
         credentials = flow.run_local_server(port=0)
         token_path.parent.mkdir(parents=True, exist_ok=True)
+        token_path.touch(mode=TOKEN_FILE_MODE)
+        token_path.chmod(TOKEN_FILE_MODE)
         token_path.write_text(credentials.to_json(), encoding="utf-8")
 
     return credentials
